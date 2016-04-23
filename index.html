@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html>
-<body>
-
-<h1 id="myH1"></h1>
-
-<p id="myP"></p>
-
-<script>
-// 输出标题：
-document.getElementById("myH1").innerHTML="Welcome to my Homepage";
-// 输出段落：
-document.getElementById("myP").innerHTML="This is my first paragraph.";
+<head>
+<script src="/jquery/jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("#hide").click(function(){
+  $("p").hide();
+  });
+  $("#show").click(function(){
+  $("p").show();
+  });
+});
 </script>
-
-<p><b>注释：</b>注释不会被执行。</p>
-
+</head>
+<body>
+<p id="p1">如果点击“隐藏”按钮，我就会消失。</p>
+<button id="hide" type="button">隐藏</button>
+<button id="show" type="button">显示</button>
 </body>
 </html>
